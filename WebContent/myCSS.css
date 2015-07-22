@@ -1,0 +1,48 @@
+@CHARSET "ISO-8859-1";
+body {
+	padding-left: 5em;
+    font-family: Georgia, "Times New Roman",
+        Times, serif;
+    font-size:medium;
+    color: black;
+    background-color: #FFFFFF
+}
+  
+option, input {
+    background-color: black;
+    color: yellow;
+}
+
+table {
+	border-collapse: collapse;
+	background-color: #6699FF
+}
+
+td, thead, th {
+	border: 1px solid black;
+	border-color: #000000;
+	padding: 6px
+}
+
+th {
+	background-color: yellow;
+	color: #6699FF;
+	font-size:large;
+}
+
+thead {
+	color: #FF0000;
+}
+
+tr {
+	align: CENTER;
+	color: yellow;
+}
+
+p {
+	padding-left: 3em;
+    font-family: Georgia, "Times New Roman",
+        Times, serif;
+    font-size:large;
+    color: black;
+}

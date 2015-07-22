@@ -1,48 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>JavaScript</display-name>
+  <display-name>WebProject</display-name>
   <welcome-file-list>
-    <welcome-file>inicio2.html</welcome-file>
+    <welcome-file>menu.html</welcome-file>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>CargarTrabajadores</servlet-name>
-    <servlet-class>servicios.CargarTrabajadores</servlet-class>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>servlets.MyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CargarTrabajadores</servlet-name>
-    <url-pattern>/CargarTrabajadores</url-pattern>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>CargarMenu</servlet-name>
-    <servlet-class>servicios.CargarMenu</servlet-class>
+    <servlet-name>RecuperarEmpleadoHibernate</servlet-name>
+    <servlet-class>servlets.RecuperarEmpleadoHibernate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CargarMenu</servlet-name>
-    <url-pattern>/CargarMenu</url-pattern>
+    <servlet-name>RecuperarEmpleadoHibernate</servlet-name>
+    <url-pattern>/RecuperarEmpleadoHibernate</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Persona</servlet-name>
-    <servlet-class>beans.Persona</servlet-class>
+    <servlet-name>RecuperarEmpleadoPorId</servlet-name>
+    <servlet-class>servlets.RecuperarEmpleadoPorId</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Persona</servlet-name>
-    <url-pattern>/Persona</url-pattern>
+    <servlet-name>RecuperarEmpleadoPorId</servlet-name>
+    <url-pattern>/RecuperarEmpleadoPorId</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>CargaMenuSelect</servlet-name>
-    <servlet-class>servicios.CargaMenuSelect</servlet-class>
+    <servlet-name>ServletAutenticacion</servlet-name>
+    <servlet-class>servlets.ServletAutenticacion</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CargaMenuSelect</servlet-name>
-    <url-pattern>/CargaMenuSelect</url-pattern>
+    <servlet-name>ServletAutenticacion</servlet-name>
+    <url-pattern>/ServletAutenticacion</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>CargaJSON</servlet-name>
-    <servlet-class>servicios.CargaJSON</servlet-class>
+    <servlet-name>SesionesActivas</servlet-name>
+    <servlet-class>servlets.SesionesActivas</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CargaJSON</servlet-name>
-    <url-pattern>/CargaJSON</url-pattern>
+    <servlet-name>SesionesActivas</servlet-name>
+    <url-pattern>/SesionesActivas</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListaDepartamentos</servlet-name>
+    <servlet-class>servlets.ListaDepartamentos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListaDepartamentos</servlet-name>
+    <url-pattern>/ListaDepartamentos</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>upload</servlet-name>
+    <servlet-class>servlets.UploadFileExample</servlet-class>
+    <init-param><param-name>RUTA_SUBIDA_FICHEROS</param-name><param-value>C:\logs</param-value></init-param>
+    <multipart-config>
+      <max-file-size>3145728</max-file-size>
+      <max-request-size>5242880</max-request-size>
+    </multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>upload</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PrimeraSesion</servlet-name>
+    <servlet-class>servlets.PrimeraSesion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PrimeraSesion</servlet-name>
+    <url-pattern>/PrimeraSesion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletRedireccion</servlet-name>
+    <servlet-class>servlets.ServletRedireccion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletRedireccion</servlet-name>
+    <url-pattern>/ServletRedireccion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ClasificaSerieA</servlet-name>
+    <servlet-class>servlets.ClasificaSerieA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClasificaSerieA</servlet-name>
+    <url-pattern>/ClasificaSerieA</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletCookie</servlet-name>
+    <servlet-class>servlets.ServletCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletCookie</servlet-name>
+    <url-pattern>/ServletCookie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>servlets.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletErrores</servlet-name>
+    <servlet-class>servlets.ServletErrores</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletErrores</servlet-name>
+    <url-pattern>/ServletErrores</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RecuperarEmpleadosPorDepts</servlet-name>
+    <servlet-class>servlets.RecuperarEmpleadosPorDepts</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecuperarEmpleadosPorDepts</servlet-name>
+    <url-pattern>/RecuperarEmpleadosPorDepts</url-pattern>
   </servlet-mapping>
   <session-config>
     <session-timeout>5</session-timeout>
